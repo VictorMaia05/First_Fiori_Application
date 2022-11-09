@@ -1,0 +1,57 @@
+<mvc:View controllerName="TRA.aplicativo2.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:cards="sap.f.cards"
+    xmlns:layout="sap.ui.layout">
+    <Page id="page" title="{i18n>title}">
+
+        <Carousel id="produtos" pages="{modeloProdutos>/}" height="auto">
+            <customLayout>
+                <CarouselLayout visiblePagesCount="5" />
+            </customLayout>
+
+            <f:Card>
+
+                <f:header>
+                    <cards:Header title="{modeloProdutos>ProductName}" subtitle="{modeloProdutos>ProductID}" 
+                                  press="aoPressionarCard"/>
+                </f:header>
+
+                <f:content>
+                    <layout:VerticalLayout >
+
+                        <Label class="sapUiTinyMarginBegin" text="Unidades em estoque" />
+                        <Text class="sapUiTinyMarginBegin sapUiTinyMarginBottom" text="{modeloProdutos>UnitsInStock}"/>
+
+                        <Label class="sapUiTinyMarginBegin" text="Descontinuado:" />
+                        <Switch class="sapUiTinyMarginBegin" state="{modeloProdutos>Discontinued}" enabled="false"/>
+
+                    </layout:VerticalLayout>
+
+
+                </f:content>
+
+            </f:Card>
+
+            <!-- <StandardListItem id="item" title="{ProductName}" description="{UnitsInStock}"/>  -->
+        </Carousel>
+
+        <!-- <List id="produtos"
+              headerText="Produtos"
+              items="{/Products}" 
+              growing="true" > -->
+<!--Agregações-->
+            <!-- <StandardListItem
+                title="{ProductName}"
+                description="{UnitsInStock}"
+                info="{UnitPrice}"
+                icon="{ProductPicUrl}"
+            />
+
+        </List>--> 
+        
+        <footer>
+        </footer>
+    </Page>
+</mvc:View>

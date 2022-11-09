@@ -1,0 +1,47 @@
+<mvc:View xmlns:m="sap.m" controllerName="TRA.aplicativo2.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.uxap">
+
+    <ObjectPageLayout id="detalheProduto" showTitleInHeaderContent="true" >
+
+        <headerTitle>
+
+            <ObjectPageHeader objectTitle="{ProductName}">
+
+                <ObjectPageHeaderActionButton icon="sap-icon://nav-back" press="aoPressionarVoltar"/>
+
+            </ObjectPageHeader>
+
+        </headerTitle>
+
+        <ObjectPageSection title="Detalhes do Produto">
+
+            <ObjectPageSubSection>
+
+                <m:VBox>
+
+                    <m:HBox>
+                        <m:Label class= "sapUiTinyMarginTop" text="Preço Unitário:"/>
+                        <m:Text class= "sapUiTinyMargin" text="{UnitPrice}"/>
+                    </m:HBox>
+                    
+                </m:VBox>
+
+            </ObjectPageSubSection>
+
+        </ObjectPageSection>
+
+        
+        <ObjectPageSection id="secaoFornecedor" title="Fornecedor">
+
+            <ObjectPageSubSection id="subsecaoFornecedor">
+
+
+
+            </ObjectPageSubSection>
+
+        </ObjectPageSection>
+
+    </ObjectPageLayout>
+    
+</mvc:View>

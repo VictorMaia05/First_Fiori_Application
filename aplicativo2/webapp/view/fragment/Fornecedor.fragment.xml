@@ -1,0 +1,36 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+
+    <VBox class="sapUiSmallMargin">
+        <form:SimpleForm id="formFornecedor"
+            editable="true"
+            layout="ResponsiveGridLayout"
+            labelSpanXL="3"
+            labelSpanL="3"
+            labelSpanM="3"
+            labelSpanS="12"
+            adjustLabelSpan="false"
+            emptySpanXL="4"
+            emptySpanL="4"
+            emptySpanM="4"
+            emptySpanS="0"
+            columnsXL="1"
+            columnsL="1"
+            columnsM="1"
+            singleContainerFullSize="false">
+
+            <form:content>
+                <Label text="Nome do fornecedor" />
+                <Text text="{Supplier/CompanyName}" />
+                <Label text="Sobrenome do fornecedor" />
+                <Text text="{Supplier/CompanyName}" />
+                <Label text="Endereço do fornecedor" />
+                <Text text="{Supplier/CompanyName}" />
+            </form:content>
+
+        </form:SimpleForm>
+    </VBox>
+
+</core:FragmentDefinition>
